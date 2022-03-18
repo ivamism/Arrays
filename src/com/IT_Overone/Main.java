@@ -23,5 +23,30 @@ public class Main {
             System.out.println(values[i] + "->" + isGreaterThan20);
 
         }
+        /* Практическое задание:
+            1. Найдите сумму элементов массива. Результаты вывести на экран
+            2. Найдите наименьшее число в массиве и вывести его.
+            3. Найдите произведение элементов массива. Результаты вывести на экран
+         */
+
+        int summ_res = values[0]+values[1]+values[2]+values[3]+values[4]; // вычисляем сумму элементов массива
+        System.out.println ("Сумма Элементов массива равна " + summ_res);  // и выводим ее на экран
+
+        int multiply_res = values[0]*values[1]*values[2]*values[3]*values[4]; // вычисляем произведение элементов массива
+        System.out.println("Произведение элементов рассива равно " + multiply_res); // и выводим на экран
+
+        int values_min = values[0];
+        for (int i = 1; i < values.length; i++) {
+            if (values_min > values[i]) values_min = values[i];
+                    }
+        System.out.println("Минимальный элемент массива - " + values_min);
+
+int values_max = values[0];
+        for (int i = 1; i < values.length; i++) {
+            if (values_max < values[i]) values_min = values[i];
+                    }
+        System.out.println("Максимальный элемент массива - " + values_max);
+
+
     }
 }
