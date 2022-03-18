@@ -43,7 +43,7 @@ public class Main {
 
 int values_max = values[0];
         for (int i = 1; i < values.length; i++) {
-            if (values_max < values[i]) values_min = values[i];
+            if (values_max < values[i]) values_max = values[i];
                     }
         System.out.println("Максимальный элемент массива - " + values_max);
 
