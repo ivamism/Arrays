@@ -47,6 +47,7 @@ public class Main {
         for (int i = 0; i < values.length; i++) {
             if (values_max < values[i]) values_max = values[i];
         }
+        return values_max;
     }
 
     private static int min(int[] values) {
@@ -54,6 +55,7 @@ public class Main {
         for (int  i = 0; i < values.length; i++) {
             if (values_min > values[i]) values_min = values[i];
         }
+        return values_min;
     }
 
     private static int multiply(int[] values) {
