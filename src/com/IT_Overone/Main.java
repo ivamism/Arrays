@@ -27,14 +27,10 @@ public class Main {
             1. Найдите сумму элементов массива. Результаты вывести на экран
             2. Найдите наименьшее число в массиве и вывести его.
             3. Найдите произведение элементов массива. Результаты вывести на экран
-         */
+        */
+        sum(values);
+        System.out.println ("Сумма Элементов массива равна " + sum(values));  // и выводим ее на экран
 
-
-        int summ_res = 0;                           // вычисляем сумму элементов массива
-        for (int i = 0; i< values.length; i++) {    // с помощью цикла for
-            summ_res += values[i];
-        }
-        System.out.println ("Сумма Элементов массива равна " + summ_res);  // и выводим ее на экран
 
         int multiply_res = 1;                       // вычисляем произведение элементов массива
         for (int i = 0; i< values.length; i++) {    // с помощью цикла for
@@ -55,5 +51,13 @@ int values_max = values[0];
         System.out.println("Максимальный элемент массива: " + values_max);
 
 
+    }
+
+    private static int sum(int[] values) {
+        int summ_res = 0;                           // вычисляем сумму элементов массива
+        for (int i = 0; i < values.length; i++) {    // с помощью цикла for
+            summ_res += values[i];
+        }
+        return summ_res;
     }
 }
