@@ -34,19 +34,26 @@ public class Main {
         multiply (values);                                                              // вызываем метод multiply
         System.out.println("Произведение элементов рассива равно " + multiply(values)); // и выводим на экран
 
+        min (values);
+        System.out.println("Минимальный элемент массива: " + min(values));
+
+        max (values);
+        System.out.println("Максимальный элемент массива: " + max(values));
+    }
+
+    private static int max (int[] values) {
+
+        int values_max = values[0];
+        for (int i = 0; i < values.length; i++) {
+            if (values_max < values[i]) values_max = values[i];
+        }
+    }
+
+    private static int min(int[] values) {
         int values_min = values[0];
         for (int  i = 0; i < values.length; i++) {
             if (values_min > values[i]) values_min = values[i];
         }
-        System.out.println("Минимальный элемент массива: " + values_min);
-
-int values_max = values[0];
-        for (int i = 0; i < values.length; i++) {
-            if (values_max < values[i]) values_max = values[i];
-                    }
-        System.out.println("Максимальный элемент массива: " + values_max);
-
-
     }
 
     private static int multiply(int[] values) {
