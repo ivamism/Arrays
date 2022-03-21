@@ -28,15 +28,11 @@ public class Main {
             2. Найдите наименьшее число в массиве и вывести его.
             3. Найдите произведение элементов массива. Результаты вывести на экран
         */
-        sum(values);
-        System.out.println ("Сумма Элементов массива равна " + sum(values));  // и выводим ее на экран
+        sum(values);                                                          //вызываем метод sum
+        System.out.println ("Сумма Элементов массива равна " + sum(values));  // и выводим ее на экран результат вычислений
 
-
-        int multiply_res = 1;                       // вычисляем произведение элементов массива
-        for (int i = 0; i< values.length; i++) {    // с помощью цикла for
-            multiply_res *= values[i];
-        }
-        System.out.println("Произведение элементов рассива равно " + multiply_res); // и выводим на экран
+        multiply (values);                                                              // вызываем метод multiply
+        System.out.println("Произведение элементов рассива равно " + multiply(values)); // и выводим на экран
 
         int values_min = values[0];
         for (int  i = 0; i < values.length; i++) {
@@ -51,6 +47,14 @@ int values_max = values[0];
         System.out.println("Максимальный элемент массива: " + values_max);
 
 
+    }
+
+    private static int multiply(int[] values) {
+        int multiply_res = 1;                       // вычисляем произведение элементов массива
+        for (int i = 0; i< values.length; i++) {    // с помощью цикла for
+            multiply_res *= values[i];
+        }
+        return multiply_res;
     }
 
     private static int sum(int[] values) {
